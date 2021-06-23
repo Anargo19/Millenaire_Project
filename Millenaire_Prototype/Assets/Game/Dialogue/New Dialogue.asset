@@ -1,0 +1,245 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7156921724819815502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: eb32b44b-aaea-40d0-a182-2640789df360
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  textDialogue: Merci beaucoup !
+  childIDs: []
+  position:
+    serializedVersion: 2
+    x: 497
+    y: 86
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: QuestFinished
+  isQuestChoice: 0
+--- !u!114 &-3747346352025794345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: ace212c7-1aca-42ca-b160-12b93fdee5fc
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  textDialogue: Bonjour, vous avez du nouveau ?
+  childIDs:
+  - 154dedb8-4c94-4d63-ad76-b1c47cc58cb5
+  - 07b28474-22ea-4fdf-a781-c83a86e905e7
+  position:
+    serializedVersion: 2
+    x: 9
+    y: 200
+    width: 200
+    height: 100
+  onEnter: TestRootEntry
+  onExitAction: 
+  isQuestChoice: 0
+--- !u!114 &-2122007165618588174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: 1283ffaa-93fa-4215-b612-1d09ff164529
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  textDialogue: You are a bold one.
+  childIDs: []
+  position:
+    serializedVersion: 2
+    x: 496
+    y: 45
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: QuestFinished
+  isQuestChoice: 0
+--- !u!114 &-1992472752963690776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: 8ccd6b83-e127-4019-b729-5b19059ada52
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  textDialogue: Hi
+  childIDs:
+  - 864f4f01-547d-4c7a-ad13-a08043ca5f53
+  position:
+    serializedVersion: 2
+    x: 246
+    y: 348
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: 
+  isQuestChoice: 0
+--- !u!114 &-1090328791715184450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: 9b7fcfed-5985-41d9-923c-234ac2f84cad
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  textDialogue: Ne vous en faites pas, je cromprends
+  childIDs: []
+  position:
+    serializedVersion: 2
+    x: 494
+    y: 310
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: 
+  isQuestChoice: 0
+--- !u!114 &-952322770308494540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: 07b28474-22ea-4fdf-a781-c83a86e905e7
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  textDialogue: "Non d\xE9sol\xE9"
+  childIDs:
+  - 9b7fcfed-5985-41d9-923c-234ac2f84cad
+  position:
+    serializedVersion: 2
+    x: 244
+    y: 310
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: 
+  isQuestChoice: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185c7cd2b7ada5c4891b897708035480, type: 3}
+  m_Name: New Dialogue
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -3747346352025794345}
+  - {fileID: 6582250119802045238}
+  - {fileID: -952322770308494540}
+  - {fileID: -7156921724819815502}
+  - {fileID: -1090328791715184450}
+  isFirstDialogue: 0
+  isQuestDialogue: 0
+  newNodeOffSet: {x: 250, y: 0}
+--- !u!114 &3303126019336458851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: 920b84e1-e9da-46d1-8774-26297a65afbd
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  textDialogue: General Kenobi
+  childIDs:
+  - 1283ffaa-93fa-4215-b612-1d09ff164529
+  position:
+    serializedVersion: 2
+    x: 246
+    y: 48
+    width: 200
+    height: 100
+  onEnter: Oui
+  onExitAction: 
+  isQuestChoice: 0
+--- !u!114 &5714981576369693491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: 864f4f01-547d-4c7a-ad13-a08043ca5f53
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  textDialogue: I see you don't get it
+  childIDs: []
+  position:
+    serializedVersion: 2
+    x: 496
+    y: 348
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: QuestFinished
+  isQuestChoice: 0
+--- !u!114 &6582250119802045238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: 154dedb8-4c94-4d63-ad76-b1c47cc58cb5
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  textDialogue: "Oui, voici vos 10 unit\xE9s de <sprite index=0> bois"
+  childIDs:
+  - eb32b44b-aaea-40d0-a182-2640789df360
+  position:
+    serializedVersion: 2
+    x: 247
+    y: 87
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: 
+  isQuestChoice: 1

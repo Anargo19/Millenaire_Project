@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8286261384779994100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: 718a426c-511b-445a-9008-c2f2634feeb7
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  textDialogue: "D\xE9sol\xE9 cela ne m'int\xE9resse pas."
+  childIDs:
+  - 95d4feac-b255-4bfe-a836-a78c36b09100
+  position:
+    serializedVersion: 2
+    x: 258
+    y: 218
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: 
+  isQuestChoice: 0
+--- !u!114 &-5217454863039366290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: 58007339-2ffc-4ef0-b258-52f691df8471
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  textDialogue: "Merci beaucoup, revenez me voir quand vous aurez le n\xE9cessaire
+    !"
+  childIDs: []
+  position:
+    serializedVersion: 2
+    x: 575
+    y: 32
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: GivenQuest
+  isQuestChoice: 0
+--- !u!114 &-728625688476369169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: 60d5b510-6fe3-4890-94e6-72f6b1c65af4
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  textDialogue: "Bien s\xFBr !"
+  childIDs:
+  - 58007339-2ffc-4ef0-b258-52f691df8471
+  position:
+    serializedVersion: 2
+    x: 269
+    y: 33
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: 
+  isQuestChoice: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185c7cd2b7ada5c4891b897708035480, type: 3}
+  m_Name: QuestDialogue
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 2632768651249283218}
+  - {fileID: -728625688476369169}
+  - {fileID: -8286261384779994100}
+  - {fileID: -5217454863039366290}
+  - {fileID: 4017412450833618599}
+  isFirstDialogue: 0
+  isQuestDialogue: 1
+  newNodeOffSet: {x: 250, y: 0}
+--- !u!114 &2632768651249283218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: 7f56e6fb-ccf4-4110-b42b-ba358c7b6135
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  textDialogue: "Bonjour voyageur, nous construisons actuellement une habitation,
+    pourriez vous nous aider \xE0 r\xE9cup\xE9rer 10 unit\xE9s de <sprite index=0>
+    bois."
+  childIDs:
+  - 60d5b510-6fe3-4890-94e6-72f6b1c65af4
+  - 718a426c-511b-445a-9008-c2f2634feeb7
+  position:
+    serializedVersion: 2
+    x: 8
+    y: 116
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: 
+  isQuestChoice: 0
+--- !u!114 &4017412450833618599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: 95d4feac-b255-4bfe-a836-a78c36b09100
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  textDialogue: Je vois, je ne vous en veux point, bonne continuation.
+  childIDs: []
+  position:
+    serializedVersion: 2
+    x: 508
+    y: 218
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: 
+  isQuestChoice: 0

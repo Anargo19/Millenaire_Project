@@ -1,0 +1,176 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3747346352025794345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: ace212c7-1aca-42ca-b160-12b93fdee5fc
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  textDialogue: "Bienvenue voyageur, il ne me semble pas vous avoir d\xE9j\xE0 vu"
+  childIDs:
+  - 8d63f16a-4f67-4c08-84a3-1cd076b47919
+  - 7ddd58a0-7e06-4911-99d1-821cd5ad3437
+  position:
+    serializedVersion: 2
+    x: 9
+    y: 200
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: CheckIfCanComplete
+  isQuestChoice: 0
+--- !u!114 &-1600631060969301695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: 30685af1-4d65-47a8-9440-ba55217d1a71
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  textDialogue: "Nous somme un village appartenant \xE0 l'Empire Byzantin, et j'en
+    suis le chef !"
+  childIDs:
+  - 6bec88dc-db08-4e7a-ad0a-c886bf5a04c7
+  position:
+    serializedVersion: 2
+    x: 749
+    y: 147
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: 
+  isQuestChoice: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185c7cd2b7ada5c4891b897708035480, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -3747346352025794345}
+  - {fileID: 9009500990371657797}
+  - {fileID: 1670256780830708978}
+  - {fileID: 2908361116300672028}
+  - {fileID: -1600631060969301695}
+  - {fileID: 3248590579597785159}
+  isFirstDialogue: 1
+  isQuestDialogue: 0
+  newNodeOffSet: {x: 250, y: 0}
+--- !u!114 &1670256780830708978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: 7ddd58a0-7e06-4911-99d1-821cd5ad3437
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  textDialogue: Effectivement, je viens d'arriver en ville
+  childIDs:
+  - 4f8534d3-1440-40fd-8b44-a4406734d2bc
+  position:
+    serializedVersion: 2
+    x: 260
+    y: 265
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: 
+  isQuestChoice: 0
+--- !u!114 &2908361116300672028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: 4f8534d3-1440-40fd-8b44-a4406734d2bc
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  textDialogue: "Je vois, bienvenue dans notre village d\xE8s lors !"
+  childIDs:
+  - 30685af1-4d65-47a8-9440-ba55217d1a71
+  position:
+    serializedVersion: 2
+    x: 484
+    y: 269
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: 
+  isQuestChoice: 0
+--- !u!114 &3248590579597785159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: 6bec88dc-db08-4e7a-ad0a-c886bf5a04c7
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  textDialogue: "Si vous avez besoin de traiter d'affaires concernant le village
+    ou l'Empire lui m\xEAme, veuillez vous r\xE9f\xE9rez \xE0 ma personne"
+  childIDs: []
+  position:
+    serializedVersion: 2
+    x: 982
+    y: 151
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: 
+  isQuestChoice: 0
+--- !u!114 &9009500990371657797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: 8d63f16a-4f67-4c08-84a3-1cd076b47919
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  textDialogue: "Vous \xEAtes qui, je suis o\xF9 ?"
+  childIDs:
+  - 30685af1-4d65-47a8-9440-ba55217d1a71
+  position:
+    serializedVersion: 2
+    x: 260
+    y: 69
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: 
+  isQuestChoice: 0

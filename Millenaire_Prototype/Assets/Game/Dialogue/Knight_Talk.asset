@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185c7cd2b7ada5c4891b897708035480, type: 3}
+  m_Name: Knight_Talk
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 801622969585338534}
+  isFirstDialogue: 0
+  isQuestDialogue: 0
+  newNodeOffSet: {x: 250, y: 0}
+--- !u!114 &801622969585338534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5b42f1fece39d45b8d5264c2339b45, type: 3}
+  m_Name: 9556a550-e8c0-4603-b8f4-d80751a4bfe8
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  textDialogue: Que me voulez vous ? Hors de ma vue !
+  childIDs: []
+  position:
+    serializedVersion: 2
+    x: -1
+    y: 66
+    width: 200
+    height: 100
+  onEnter: 
+  onExitAction: 
