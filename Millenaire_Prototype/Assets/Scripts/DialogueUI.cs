@@ -70,7 +70,7 @@ namespace RPG.UI
                 newChoice.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = choice.GetText();
                 //Debug.Log(newChoice.GetComponentInChildren<Button>());
                 Button button = newChoice.GetComponentInChildren<Button>();
-                if (choice.QuestChoice())
+              /* if (choice.QuestChoice())
                 {
                     if (playerConversant.GetComponent<PlayerResources>().GetSpecificResources(playerConversant.GetComponent<PlayerResources>().GetWood()) >= 10)
                     {
@@ -85,7 +85,7 @@ namespace RPG.UI
                             newChoice.GetComponent<Image>().color = new Color(102, 102, 102, 0.5f);
                         
                     }
-                }
+                } */
                     
                     button.onClick.AddListener(() => 
                     {
@@ -93,6 +93,7 @@ namespace RPG.UI
                     });
             }
         }
+        
         //public void BuildChoiceInterract()
         //{
         //    int i = 1;

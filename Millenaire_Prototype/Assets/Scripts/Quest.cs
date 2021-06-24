@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName ="Quest")]
-public class QuestScriptable : ScriptableObject
+public class Quest : ScriptableObject
 {
     [SerializeField] string[] objectives;
     [SerializeField] string description;

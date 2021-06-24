@@ -37,4 +37,12 @@ public class PlayerResources : MonoBehaviour
     {
         return wood;
     }
+    public ResourcesScriptable GetResourceScriptable(string resourcename)
+    {
+        foreach(var resource in resources)
+        {
+            if (resource.Key.name == resourcename) return resource.Key;
+        }
+        return null;
+    }
 }

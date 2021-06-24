@@ -19,19 +19,24 @@ public class QuestUI : MonoBehaviour
     {
 
         playerQuestList = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerQuestList>();
+        Refresh();
 
+    }
+
+    public void Refresh()
+    {
         foreach (Transform t in QuestList.transform)
         {
             Destroy(t.gameObject);
         }
 
-        foreach(QuestScriptable quest in playerQuestList.GetQuests())
+        foreach (QuestStatus quest in playerQuestList.GetQuests())
         {
+            Quest questScript = quest.GetQuest();
             GameObject newQuest = Instantiate(QuestContent, QuestList.transform);
-            newQuest.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = quest.name;
+            newQuest.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = questScript.name;
             newQuest.GetComponent<Button>().onClick.AddListener(() => { ShowQuestDetails(quest); }); ;
         }
-
     }
 
     private void Start()
@@ -39,9 +44,9 @@ public class QuestUI : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    void ShowQuestDetails(QuestScriptable quest)
+    void ShowQuestDetails(QuestStatus status)
     {
         QuestDetails.SetActive(true);
-        QuestDetails.GetComponent<QuestDetailsUI>().ShowDetails(quest);
+        QuestDetails.GetComponent<QuestDetailsUI>().ShowDetails(status);
     }
 }

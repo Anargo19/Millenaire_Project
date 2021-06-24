@@ -85,6 +85,7 @@ public class Interaction : MonoBehaviour
             bool isActiveQuest = questLog.activeSelf;
             
             questLog.SetActive(!isActiveQuest);
+            questLog.GetComponent<QuestUI>().Refresh();
             if (isActiveQuest)
             {
 

@@ -86,10 +86,25 @@ namespace RPG.Dialogue
 
         }
 
+        private IEnumerable<DialogueNode> FilterOnConditions(IEnumerable<DialogueNode> inputNode)
+        {
+            foreach(var node in inputNode)
+            {
+                if (node.CheckCondition(GetEvaluators()))
+                {
+                    yield return node;
+                }
+            }
+        }
+
+        private IEnumerable<IPredicateEvaluator> GetEvaluators()
+        {
+            return GetComponents<IPredicateEvaluator>();
+        }
+
         public IEnumerable<DialogueNode> GetChoices()
         {
-            DialogueNode[] children = currentDialogue.GetAllChildren(currentNode).ToArray();
-            return children;
+            return FilterOnConditions(currentDialogue.GetPlayerChildren(currentNode));
         }
 
         public void Next()
@@ -123,14 +138,15 @@ namespace RPG.Dialogue
 
         public bool hasNext()
         {
-            if (currentDialogue.GetAllChildren(currentNode).Any())
+            return FilterOnConditions(currentDialogue.GetAllChildren(currentNode)).Count() > 0;
+           /* if (currentDialogue.GetAllChildren(currentNode).Any())
             {
                 return true;
             }
             else
             {
                 return false;
-            }
+            }*/
         }
 
         public bool isActive()

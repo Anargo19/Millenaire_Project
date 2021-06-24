@@ -12,7 +12,8 @@ namespace RPG.Dialogue
         [SerializeField] Dialogue questingDialogue;
         [SerializeField] Dialogue firstdialogue;
         [SerializeField] string npcName;
-        Quest quest;
+        [SerializeField] bool hasQuest;
+        QuestStatus quest;
         bool firstMet = true;
         bool questing = false;
         /*public CursorType GetCursorType()
@@ -35,7 +36,7 @@ namespace RPG.Dialogue
         }*/
         private void Awake()
         {
-            if(GetComponent<Quest>() != null) quest = GetComponent<Quest>();
+            //if(GetComponent<QuestStatus>() != null) quest = GetComponent<QuestStatus>();
         }
 
         public string GetName()
@@ -51,7 +52,7 @@ namespace RPG.Dialogue
             }
             if(quest != null)
             {
-                if (quest.HasQuest())
+                if (hasQuest)
                 {
                     return questDialogue;
                 }
@@ -72,7 +73,7 @@ namespace RPG.Dialogue
             }
             if (dialogue.GetIfQuestDialogue())
             {
-                quest.SetQuest(false);
+                hasQuest = false;
                 questing = true;
             }
         }

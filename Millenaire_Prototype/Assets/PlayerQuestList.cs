@@ -2,13 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerQuestList : MonoBehaviour
+public class PlayerQuestList : MonoBehaviour, IPredicateEvaluator
 {
-     [SerializeField] List<QuestScriptable> quests = new List<QuestScriptable>();
+     [SerializeField] List<QuestStatus> questStatus = new List<QuestStatus>();
 
-    public IEnumerable<QuestScriptable> GetQuests()
+    public bool? Evaluate(string predicator, string[] parameters)
     {
-        return quests;
+        if (predicator == "HasResources")
+        {
+
+            return GetComponent<PlayerResources>().GetSpecificResources(GetComponent<PlayerResources>().GetResourceScriptable(parameters[0])) >= 10;
+        }
+        return null;
     }
+
+    public IEnumerable<QuestStatus> GetQuests()
+    {
+        return questStatus;
+    }
+
+    public void RemoveQuest(QuestStatus quest)
+    {
+        questStatus.Remove(quest);
+    }
+
 
 }

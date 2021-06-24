@@ -179,6 +179,7 @@ MonoBehaviour:
   questingDialogue: {fileID: 0}
   firstdialogue: {fileID: 0}
   npcName: Chevalier
+  hasQuest: 0
 --- !u!23 &23627560
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4057,9 +4058,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1203641205}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99db078099b7d3a4381922daa40dc1c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 623411ba784a256468e4772c474ee147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questStatus:
+  - quest: {fileID: 11400000, guid: edb14c6b27ce9254d9dd58049f039781, type: 2}
+    completedObjectives: []
+  - quest: {fileID: 11400000, guid: 85f0ace2fc0ecfc4bb1fd7e0504a25bd, type: 2}
+    completedObjectives: []
 --- !u!114 &1203641212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4824,9 +4830,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623411ba784a256468e4772c474ee147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quests:
-  - {fileID: 11400000, guid: edb14c6b27ce9254d9dd58049f039781, type: 2}
-  - {fileID: 11400000, guid: 85f0ace2fc0ecfc4bb1fd7e0504a25bd, type: 2}
+  questStatus:
+  - quest: {fileID: 11400000, guid: edb14c6b27ce9254d9dd58049f039781, type: 2}
+    completedObjectives:
+    - "R\xE9cup\xE9rez du bois, et ramenez le au chef"
+  - quest: {fileID: 11400000, guid: 85f0ace2fc0ecfc4bb1fd7e0504a25bd, type: 2}
+    completedObjectives: []
 --- !u!1 &1498852787
 GameObject:
   m_ObjectHideFlags: 0
@@ -5275,6 +5284,7 @@ MonoBehaviour:
   questingDialogue: {fileID: 0}
   firstdialogue: {fileID: 0}
   npcName: Chevalier
+  hasQuest: 0
 --- !u!23 &1743026095
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6138,7 +6148,6 @@ GameObject:
   - component: {fileID: 2106547067}
   - component: {fileID: 2106547066}
   - component: {fileID: 2106547072}
-  - component: {fileID: 2106547073}
   - component: {fileID: 2106547074}
   m_Layer: 0
   m_Name: NPC
@@ -6164,6 +6173,7 @@ MonoBehaviour:
   questingDialogue: {fileID: 11400000, guid: 44b204dcc72996848ab4f9f1e5282fe5, type: 2}
   firstdialogue: {fileID: 11400000, guid: 62f26a9628df6e64a9353ebc1d781831, type: 2}
   npcName: Byzantine Chief
+  hasQuest: 1
 --- !u!54 &2106547067
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6288,20 +6298,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2106547073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2106547065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b68b3672103f4df4f9a193cbf4f0d5dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  asAQuest: 1
-  image: {fileID: 729413504}
+      - m_Target: {fileID: 1479569806}
+        m_TargetAssemblyTypeName: PlayerQuestList, Assembly-CSharp
+        m_MethodName: RemoveQuest
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: edb14c6b27ce9254d9dd58049f039781,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: QuestScriptable, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2106547074
 MonoBehaviour:
   m_ObjectHideFlags: 0

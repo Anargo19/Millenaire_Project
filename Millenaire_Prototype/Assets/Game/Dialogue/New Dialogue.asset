@@ -24,6 +24,9 @@ MonoBehaviour:
   onEnter: 
   onExitAction: QuestFinished
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []
 --- !u!114 &-3747346352025794345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,6 +53,9 @@ MonoBehaviour:
   onEnter: TestRootEntry
   onExitAction: 
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []
 --- !u!114 &-2122007165618588174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +80,9 @@ MonoBehaviour:
   onEnter: 
   onExitAction: QuestFinished
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []
 --- !u!114 &-1992472752963690776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +108,9 @@ MonoBehaviour:
   onEnter: 
   onExitAction: 
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []
 --- !u!114 &-1090328791715184450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +135,9 @@ MonoBehaviour:
   onEnter: 
   onExitAction: 
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []
 --- !u!114 &-952322770308494540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +163,9 @@ MonoBehaviour:
   onEnter: 
   onExitAction: 
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +212,9 @@ MonoBehaviour:
   onEnter: Oui
   onExitAction: 
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []
 --- !u!114 &5714981576369693491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +239,9 @@ MonoBehaviour:
   onEnter: 
   onExitAction: QuestFinished
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []
 --- !u!114 &6582250119802045238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,10 +260,15 @@ MonoBehaviour:
   - eb32b44b-aaea-40d0-a182-2640789df360
   position:
     serializedVersion: 2
-    x: 247
-    y: 87
+    x: 246
+    y: 84
     width: 200
     height: 100
   onEnter: 
   onExitAction: 
   isQuestChoice: 1
+  condition:
+    predicator: HasResources
+    parameters:
+    - Wood
+    - 10

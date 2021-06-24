@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -15,6 +16,7 @@ namespace RPG.Dialogue
         [SerializeField] string onEnter;
         [SerializeField] string onExitAction;
         [SerializeField] bool isQuestChoice;
+        [SerializeField] Condition condition;
 
         public string GetText()
         {
@@ -78,6 +80,11 @@ namespace RPG.Dialogue
         public List<string> GetChildren()
         {
             return childIDs;
+        }
+
+        public bool CheckCondition(IEnumerable<IPredicateEvaluator> evaluators)
+        {
+            return condition.Check(evaluators);
         }
     }
 }
