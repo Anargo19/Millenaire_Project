@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c51e358d8dc588b4c8583568cf7f681e, type: 3}
   m_Name: Le grand plongeon
   m_EditorClassIdentifier: 
-  objectives:
-  - Sautez dans le vide
   description: "Apparemment cet endroit est maudit, m\xEAme en sautant dans le vide
     b\xE9ant autour, je ne mourrais pas"
+  objectives:
+  - {fileID: 11400000, guid: cfd7589e6313c2b4bb4ed7c901259782, type: 2}

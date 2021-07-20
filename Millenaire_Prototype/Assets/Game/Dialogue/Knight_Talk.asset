@@ -30,7 +30,7 @@ MonoBehaviour:
   m_Name: 9556a550-e8c0-4603-b8f4-d80751a4bfe8
   m_EditorClassIdentifier: 
   isPlayer: 0
-  textDialogue: Que me voulez vous ? Hors de ma vue !
+  textDialogue: What do you want? Out of my sight!
   childIDs: []
   position:
     serializedVersion: 2
@@ -40,3 +40,7 @@ MonoBehaviour:
     height: 100
   onEnter: 
   onExitAction: 
+  isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []

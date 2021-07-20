@@ -13,18 +13,21 @@ MonoBehaviour:
   m_Name: 718a426c-511b-445a-9008-c2f2634feeb7
   m_EditorClassIdentifier: 
   isPlayer: 1
-  textDialogue: "D\xE9sol\xE9 cela ne m'int\xE9resse pas."
+  textDialogue: Sorry, I'm not interested.
   childIDs:
   - 95d4feac-b255-4bfe-a836-a78c36b09100
   position:
     serializedVersion: 2
     x: 258
-    y: 218
+    y: 219
     width: 200
     height: 100
   onEnter: 
   onExitAction: 
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []
 --- !u!114 &-5217454863039366290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38,8 +41,7 @@ MonoBehaviour:
   m_Name: 58007339-2ffc-4ef0-b258-52f691df8471
   m_EditorClassIdentifier: 
   isPlayer: 0
-  textDialogue: "Merci beaucoup, revenez me voir quand vous aurez le n\xE9cessaire
-    !"
+  textDialogue: Thank you very much, come back to me when you have what you need!
   childIDs: []
   position:
     serializedVersion: 2
@@ -50,6 +52,9 @@ MonoBehaviour:
   onEnter: 
   onExitAction: GivenQuest
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []
 --- !u!114 &-728625688476369169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,7 +68,7 @@ MonoBehaviour:
   m_Name: 60d5b510-6fe3-4890-94e6-72f6b1c65af4
   m_EditorClassIdentifier: 
   isPlayer: 1
-  textDialogue: "Bien s\xFBr !"
+  textDialogue: Of course!
   childIDs:
   - 58007339-2ffc-4ef0-b258-52f691df8471
   position:
@@ -75,6 +80,9 @@ MonoBehaviour:
   onEnter: 
   onExitAction: 
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,21 +117,23 @@ MonoBehaviour:
   m_Name: 7f56e6fb-ccf4-4110-b42b-ba358c7b6135
   m_EditorClassIdentifier: 
   isPlayer: 0
-  textDialogue: "Bonjour voyageur, nous construisons actuellement une habitation,
-    pourriez vous nous aider \xE0 r\xE9cup\xE9rer 10 unit\xE9s de <sprite index=0>
-    bois."
+  textDialogue: Hello traveler, we are currently building a home, could you help
+    us get 10 units of <sprite index=0> wood.
   childIDs:
   - 60d5b510-6fe3-4890-94e6-72f6b1c65af4
   - 718a426c-511b-445a-9008-c2f2634feeb7
   position:
     serializedVersion: 2
     x: 8
-    y: 116
+    y: 115
     width: 200
     height: 100
   onEnter: 
   onExitAction: 
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []
 --- !u!114 &4017412450833618599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +147,7 @@ MonoBehaviour:
   m_Name: 95d4feac-b255-4bfe-a836-a78c36b09100
   m_EditorClassIdentifier: 
   isPlayer: 0
-  textDialogue: Je vois, je ne vous en veux point, bonne continuation.
+  textDialogue: I see, I don't blame you, good continuation.
   childIDs: []
   position:
     serializedVersion: 2
@@ -148,3 +158,6 @@ MonoBehaviour:
   onEnter: 
   onExitAction: 
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []

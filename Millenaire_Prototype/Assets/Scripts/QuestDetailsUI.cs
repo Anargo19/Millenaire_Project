@@ -26,11 +26,12 @@ public class QuestDetailsUI : MonoBehaviour
             Destroy(t.gameObject);
         }
 
-        foreach(string s in quest.GetObjectives())
+        foreach(Objective o in quest.GetObjectives())
         {
+            Debug.Log(o.name);
             GameObject newObjective = Instantiate(objectivePrefab, objectives.transform);
-            if (status.ObjectiveIsComplete(s)) newObjective.transform.GetChild(0).GetComponent<Image>().color = Color.green;
-            newObjective.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = s;
+            if (status.ObjectiveIsComplete(o.name)) newObjective.transform.GetChild(0).GetComponent<Image>().color = Color.green;
+            newObjective.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = o.GetDescription();
             
         }
     }

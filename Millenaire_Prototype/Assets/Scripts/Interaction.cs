@@ -69,6 +69,10 @@ public class Interaction : MonoBehaviour
                     aIConversant = hit.transform.GetComponent<AIConversant>();
 
                     GetComponent<PlayerConversant>().StartDialogue(aIConversant, aIConversant.GetDialogue());
+
+                    Animator animator = hit.transform.GetComponent<Animator>();
+                    animator.SetInteger("Action", 59);
+                    animator.SetBool("Trigger", true);
                 }
 
                 if(hit.transform.tag == "Resources")

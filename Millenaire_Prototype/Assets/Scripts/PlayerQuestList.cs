@@ -21,9 +21,22 @@ public class PlayerQuestList : MonoBehaviour, IPredicateEvaluator
         return questStatus;
     }
 
-    public void RemoveQuest(QuestStatus quest)
+    public void AddQuest(Quest quest)
     {
-        questStatus.Remove(quest);
+        QuestStatus newStatus = new QuestStatus(quest);
+        questStatus.Add(newStatus);
+       
+    }
+
+    public void RemoveQuest(Quest quest)
+    {
+        foreach(QuestStatus q in questStatus)
+        {
+            if(q.GetQuest() == quest)
+            {
+                questStatus.Remove(q);
+            }
+        }
     }
 
 

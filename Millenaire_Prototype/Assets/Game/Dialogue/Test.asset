@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ace212c7-1aca-42ca-b160-12b93fdee5fc
   m_EditorClassIdentifier: 
   isPlayer: 0
-  textDialogue: "Bienvenue voyageur, il ne me semble pas vous avoir d\xE9j\xE0 vu"
+  textDialogue: Welcome traveler, I don't think I have seen you before.
   childIDs:
   - 8d63f16a-4f67-4c08-84a3-1cd076b47919
   - 7ddd58a0-7e06-4911-99d1-821cd5ad3437
@@ -26,6 +26,9 @@ MonoBehaviour:
   onEnter: 
   onExitAction: CheckIfCanComplete
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []
 --- !u!114 &-1600631060969301695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,8 +42,8 @@ MonoBehaviour:
   m_Name: 30685af1-4d65-47a8-9440-ba55217d1a71
   m_EditorClassIdentifier: 
   isPlayer: 0
-  textDialogue: "Nous somme un village appartenant \xE0 l'Empire Byzantin, et j'en
-    suis le chef !"
+  textDialogue: We are a village belonging to the Byzantine Empire, and I am the
+    chief!
   childIDs:
   - 6bec88dc-db08-4e7a-ad0a-c886bf5a04c7
   position:
@@ -52,6 +55,9 @@ MonoBehaviour:
   onEnter: 
   onExitAction: 
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,7 +93,7 @@ MonoBehaviour:
   m_Name: 7ddd58a0-7e06-4911-99d1-821cd5ad3437
   m_EditorClassIdentifier: 
   isPlayer: 1
-  textDialogue: Effectivement, je viens d'arriver en ville
+  textDialogue: Indeed, I just arrived in town
   childIDs:
   - 4f8534d3-1440-40fd-8b44-a4406734d2bc
   position:
@@ -99,6 +105,9 @@ MonoBehaviour:
   onEnter: 
   onExitAction: 
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []
 --- !u!114 &2908361116300672028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +121,7 @@ MonoBehaviour:
   m_Name: 4f8534d3-1440-40fd-8b44-a4406734d2bc
   m_EditorClassIdentifier: 
   isPlayer: 0
-  textDialogue: "Je vois, bienvenue dans notre village d\xE8s lors !"
+  textDialogue: I see, welcome to our village then!
   childIDs:
   - 30685af1-4d65-47a8-9440-ba55217d1a71
   position:
@@ -124,6 +133,9 @@ MonoBehaviour:
   onEnter: 
   onExitAction: 
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []
 --- !u!114 &3248590579597785159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,8 +149,8 @@ MonoBehaviour:
   m_Name: 6bec88dc-db08-4e7a-ad0a-c886bf5a04c7
   m_EditorClassIdentifier: 
   isPlayer: 0
-  textDialogue: "Si vous avez besoin de traiter d'affaires concernant le village
-    ou l'Empire lui m\xEAme, veuillez vous r\xE9f\xE9rez \xE0 ma personne"
+  textDialogue: If you need to deal with matters concerning the village or the Empire
+    itself, please refer to me
   childIDs: []
   position:
     serializedVersion: 2
@@ -149,6 +161,9 @@ MonoBehaviour:
   onEnter: 
   onExitAction: 
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []
 --- !u!114 &9009500990371657797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,7 +177,7 @@ MonoBehaviour:
   m_Name: 8d63f16a-4f67-4c08-84a3-1cd076b47919
   m_EditorClassIdentifier: 
   isPlayer: 1
-  textDialogue: "Vous \xEAtes qui, je suis o\xF9 ?"
+  textDialogue: Who are you, where am I?
   childIDs:
   - 30685af1-4d65-47a8-9440-ba55217d1a71
   position:
@@ -174,3 +189,6 @@ MonoBehaviour:
   onEnter: 
   onExitAction: 
   isQuestChoice: 0
+  condition:
+    predicator: 
+    parameters: []

@@ -36,7 +36,6 @@ namespace RPG.Dialogue
         }*/
         private void Awake()
         {
-            //if(GetComponent<QuestStatus>() != null) quest = GetComponent<QuestStatus>();
         }
 
         public string GetName()
@@ -50,14 +49,12 @@ namespace RPG.Dialogue
             {
                 return firstdialogue;
             }
-            if(quest != null)
+            if (hasQuest)
             {
-                if (hasQuest)
-                {
-                    return questDialogue;
-                }
-
+                return questDialogue;
             }
+
+            
             if (questing)
             {
                 return questingDialogue;

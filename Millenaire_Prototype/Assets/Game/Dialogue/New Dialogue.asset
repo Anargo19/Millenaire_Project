@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: eb32b44b-aaea-40d0-a182-2640789df360
   m_EditorClassIdentifier: 
   isPlayer: 0
-  textDialogue: Merci beaucoup !
+  textDialogue: Thank you a lot!
   childIDs: []
   position:
     serializedVersion: 2
@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Name: ace212c7-1aca-42ca-b160-12b93fdee5fc
   m_EditorClassIdentifier: 
   isPlayer: 0
-  textDialogue: Bonjour, vous avez du nouveau ?
+  textDialogue: Hello, do you have any news?
   childIDs:
   - 154dedb8-4c94-4d63-ad76-b1c47cc58cb5
   - 07b28474-22ea-4fdf-a781-c83a86e905e7
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 9b7fcfed-5985-41d9-923c-234ac2f84cad
   m_EditorClassIdentifier: 
   isPlayer: 0
-  textDialogue: Ne vous en faites pas, je cromprends
+  textDialogue: Don't worry, I understand
   childIDs: []
   position:
     serializedVersion: 2
@@ -151,12 +151,12 @@ MonoBehaviour:
   m_Name: 07b28474-22ea-4fdf-a781-c83a86e905e7
   m_EditorClassIdentifier: 
   isPlayer: 1
-  textDialogue: "Non d\xE9sol\xE9"
+  textDialogue: No sorry
   childIDs:
   - 9b7fcfed-5985-41d9-923c-234ac2f84cad
   position:
     serializedVersion: 2
-    x: 244
+    x: 278
     y: 310
     width: 200
     height: 100
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 154dedb8-4c94-4d63-ad76-b1c47cc58cb5
   m_EditorClassIdentifier: 
   isPlayer: 1
-  textDialogue: "Oui, voici vos 10 unit\xE9s de <sprite index=0> bois"
+  textDialogue: Yes, here are your 10 units of <sprite index=0> wood
   childIDs:
   - eb32b44b-aaea-40d0-a182-2640789df360
   position:

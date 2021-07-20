@@ -5,12 +5,28 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="Quest")]
 public class Quest : ScriptableObject
 {
-    [SerializeField] string[] objectives;
+    
+    //[SerializeField] string[] objectives;
     [SerializeField] string description;
+    [SerializeField] Objective[] objectives;
 
-    public IEnumerable<string> GetObjectives()
+    private void Awake()
     {
-        return objectives;
+        foreach(Objective o in objectives)
+        {
+            if(o.GetObjectiveType() == "GetResources")
+            {
+
+            }
+        }
+    }
+
+    public IEnumerable<Objective> GetObjectives()
+    {
+        foreach(Objective o in objectives)
+        {
+            yield return o;
+        }
     }
 
     public string GetDescription()

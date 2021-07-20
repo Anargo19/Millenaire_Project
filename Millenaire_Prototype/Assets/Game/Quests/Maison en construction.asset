@@ -7,12 +7,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c51e358d8dc588b4c8583568cf7f681e, type: 3}
   m_Name: Maison en construction
   m_EditorClassIdentifier: 
-  objectives:
-  - "R\xE9cup\xE9rez du bois, et ramenez le au chef"
   description: "Le chef du village m'a parl\xE9 d'une nouvelle maison qu'ils voulait
     construire. Il a demand\xE9 monaide afin de r\xE9colter certains mat\xE9riaux"
+  objectives:
+  - {fileID: 11400000, guid: cfd7589e6313c2b4bb4ed7c901259782, type: 2}
