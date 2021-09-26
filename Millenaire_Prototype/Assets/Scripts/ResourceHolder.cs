@@ -5,13 +5,14 @@ using UnityEngine;
 public class ResourceHolder : MonoBehaviour
 {
     [SerializeField] ResourcesScriptable resource;
-    [SerializeField] float hold = 10;
+    [SerializeField] float hold;
     // Start is called before the first frame update
     
     public ResourcesScriptable GetResource()
     {
         if (hold > 0)
         {
+            Debug.Log("Resource removed");
             hold--;
             return resource;
         }

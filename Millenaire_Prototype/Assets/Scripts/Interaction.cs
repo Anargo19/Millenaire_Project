@@ -1,5 +1,6 @@
 using ECM.Components;
 using ECM.Controllers;
+using NodeCanvas.DialogueTrees;
 using RPG.Dialogue;
 using System;
 using System.Collections;
@@ -15,6 +16,11 @@ public class Interaction : MonoBehaviour
     [SerializeField] Material detected;
     [SerializeField] Material notdetected;
 
+    [SerializeField] TextMeshProUGUI interractText;
+    DialogueTreeController dialogueTreeController;
+
+    GameObject dialogueNPC;
+
     public event Action onDetection;
     public event Action onNoDetection;
     AIConversant aIConversant;
@@ -24,25 +30,66 @@ public class Interaction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+    }
+
+    private void UpdateMovement(bool obj)
+    {
+
+        GetComponent<BaseFirstPersonController>().enabled = true;
+        GetComponent<MouseLook>().SetCursorLock(true);
+        GetComponent<MouseLook>().UpdateCursorLock();
+        dialogueNPC.GetComponent<DialogueListNPC>().DeleteDialogue(dialogueTreeController);
+
+        Debug.Log(dialogueNPC.GetComponent<DialogueListNPC>().dialogueList.Count);
+
+        dialogueNPC = null;
+        dialogueTreeController = null;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(transform.rotation.z != 0)
+        {
+            transform.rotation = new Quaternion(0, 0, 0, 0);
+        }
         //On initialise un RaycastHit pour stocker les objets détectés
         RaycastHit atRange;
 
-        //On lance un RayCast depuis le joueur, sur une distance de 3 et devant lui
-        if (Physics.Raycast(transform.GetChild(0).GetChild(0).position, transform.forward, out atRange, 5) && atRange.transform.tag == "NPC" || Physics.Raycast(transform.GetChild(0).GetChild(0).position, transform.forward, out atRange, 5) && atRange.transform.tag == "Resources")
+        //We launch a RayCast from the player, on a distance of 5 and in front of him
+        if (Physics.Raycast(transform.GetChild(0).GetChild(0).position, transform.forward, out atRange, 5))
         {
-            //On dessine le trait
+            //We drawn the Ray on the Scene view
             Debug.DrawRay(transform.GetChild(0).GetChild(0).position, transform.TransformDirection(Vector3.forward) * atRange.distance, Color.blue);
 
-            //On stocke l'objet détecté
-            detectedObject = atRange.transform.gameObject;
-            if (atRange.transform.tag == "NPC") { detectedObject.transform.LookAt(transform); }
-            onDetection();
+            //Switch case to detect specifig tags
+            switch (atRange.transform.tag)
+            {
+                case "NPC":
+                    //We stock the detected object
+                    detectedObject = atRange.transform.gameObject;
+                    //We make the NPC look at us
+                    detectedObject.transform.LookAt(transform); 
+                    //We launch the Event onDetection
+                    onDetection();
+                    break;
+                case "Resources":
+                    detectedObject = atRange.transform.gameObject;
+                    onDetection();
+                    break;
+                case "Door":
+                    detectedObject = atRange.transform.gameObject;
+                    interractText.text = "Open";
+                    onDetection();
+                    break;
+                case "Chest":
+                    detectedObject = atRange.transform.gameObject;
+                    interractText.text = "Open";
+                    onDetection();
+                    break;
+            }
+
         }
         else
         {
@@ -66,19 +113,48 @@ public class Interaction : MonoBehaviour
                     Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
                     Debug.Log(hit.transform.gameObject.name);
                     hit.transform.LookAt(transform);
-                    aIConversant = hit.transform.GetComponent<AIConversant>();
+
+                    GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+                    GetComponent<BaseFirstPersonController>().enabled = false;
+                    GetComponent<MouseLook>().SetCursorLock(false);
+                    GetComponent<MouseLook>().UpdateCursorLock();
+
+                    if(hit.transform.GetComponent<DialogueListNPC>() != null) {
+                        dialogueTreeController = hit.transform.GetComponent<DialogueListNPC>().GetDialogue();
+                        dialogueNPC = hit.transform.gameObject;
+
+                        dialogueTreeController.StartDialogue(UpdateMovement);
+                    }
+                    
+                    /*aIConversant = hit.transform.GetComponent<AIConversant>();
 
                     GetComponent<PlayerConversant>().StartDialogue(aIConversant, aIConversant.GetDialogue());
 
                     Animator animator = hit.transform.GetComponent<Animator>();
                     animator.SetInteger("Action", 59);
-                    animator.SetBool("Trigger", true);
+                    animator.SetBool("Trigger", true);*/
                 }
 
-                if(hit.transform.tag == "Resources")
+                if (hit.transform.tag == "Resources")
                 {
-                    Debug.Log(hit.transform.GetComponent<ResourceHolder>().GetResource());
-                    GetComponent<PlayerResources>().AddResources(hit.transform.GetComponent<ResourceHolder>().GetResource());
+                    ResourcesScriptable resource = hit.transform.GetComponent<ResourceHolder>().GetResource();
+                    Debug.Log(resource);
+                    if (resource != null) GetComponent<PlayerResources>().AddResources(resource);
+                }
+                if (hit.transform.tag == "Chest")
+                {
+                    Debug.Log("Hit Chest");
+                    hit.transform.GetComponent<ChestInventory>().GetInventory();
+                }
+
+                if (hit.transform.tag == "Door")
+                {
+                    foreach(Transform transform in hit.transform.parent)
+                    {
+                        Animator animator = transform.GetComponent<Animator>();
+                        Debug.Log(!animator.GetBool("Open"));
+                        animator.SetBool("Open", !animator.GetBool(0));
+                    }
                 }
                 
             }
@@ -109,4 +185,5 @@ public class Interaction : MonoBehaviour
             
         }
     }
+
 }

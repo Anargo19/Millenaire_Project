@@ -48,8 +48,8 @@ MonoBehaviour:
   - 6bec88dc-db08-4e7a-ad0a-c886bf5a04c7
   position:
     serializedVersion: 2
-    x: 749
-    y: 147
+    x: 747
+    y: 146
     width: 200
     height: 100
   onEnter: 

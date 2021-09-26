@@ -6,4 +6,10 @@ using UnityEngine;
 public class ResourcesScriptable : ScriptableObject
 {
     [SerializeField] string type;
+    [SerializeField] Sprite sprite;
+
+    public Sprite GetSprite()
+    {
+        return sprite;
+    }
 }

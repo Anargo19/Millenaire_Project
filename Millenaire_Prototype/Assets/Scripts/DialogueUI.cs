@@ -25,6 +25,9 @@ namespace RPG.UI
         // Start is called before the first frame update
         void Start()
         {
+            RectTransform RectTransform = this.GetComponent<RectTransform>();
+            RectTransform.anchoredPosition = new Vector3(RectTransform.anchoredPosition.x - 150f, RectTransform.anchoredPosition.y);
+
             playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
             nextButton.onClick.AddListener(() => { playerConversant.Next(); });
             quitButton.onClick.AddListener(() => { playerConversant.Quit(); } );

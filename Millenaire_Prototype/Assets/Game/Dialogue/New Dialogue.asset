@@ -18,7 +18,7 @@ MonoBehaviour:
   position:
     serializedVersion: 2
     x: 497
-    y: 86
+    y: 85
     width: 200
     height: 100
   onEnter: 
@@ -265,7 +265,7 @@ MonoBehaviour:
     width: 200
     height: 100
   onEnter: 
-  onExitAction: 
+  onExitAction: RemoveResources
   isQuestChoice: 1
   condition:
     predicator: HasResources

@@ -40,10 +40,10 @@ namespace RPG.Dialogue
             GetComponent<MouseLook>().SetCursorLock(true);
             GetComponent<MouseLook>().UpdateCursorLock();
             currentDialogue = null;
-            TriggerExitAction();
-            currentConversant = null;
-            currentNode = null;
             currentlyChoosing = false;
+            TriggerExitAction();
+            currentNode = null;
+            currentConversant = null;
             onConversationUpdate();
         }
 

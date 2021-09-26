@@ -45,4 +45,10 @@ public class PlayerResources : MonoBehaviour
         }
         return null;
     }
+
+    public void ChangeRessources(ResourcesScriptable resource, int value)
+    {
+        resources[resource] += value;
+        OnResourceChanged();
+    }
 }

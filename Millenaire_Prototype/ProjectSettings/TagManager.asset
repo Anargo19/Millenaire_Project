@@ -6,11 +6,14 @@ TagManager:
   tags:
   - NPC
   - Resources
+  - Door
+  - Chest
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
@@ -37,8 +40,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - POLARIS RAYCAST
+  - POLARIS SPLINE
   m_SortingLayers:
   - name: Default
     uniqueID: 0

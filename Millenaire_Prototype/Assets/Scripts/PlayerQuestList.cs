@@ -11,7 +11,7 @@ public class PlayerQuestList : MonoBehaviour, IPredicateEvaluator
         if (predicator == "HasResources")
         {
 
-            return GetComponent<PlayerResources>().GetSpecificResources(GetComponent<PlayerResources>().GetResourceScriptable(parameters[0])) >= 10;
+            return GetComponent<PlayerResources>().GetSpecificResources(GetComponent<PlayerResources>().GetResourceScriptable(parameters[0])) >= int.Parse(parameters[1]);
         }
         return null;
     }
@@ -30,7 +30,7 @@ public class PlayerQuestList : MonoBehaviour, IPredicateEvaluator
 
     public void RemoveQuest(Quest quest)
     {
-        foreach(QuestStatus q in questStatus)
+        foreach(QuestStatus q in questStatus.ToArray())
         {
             if(q.GetQuest() == quest)
             {
